@@ -4,6 +4,8 @@ build: ## build i3
 	docker cp tmp:/root/rpmbuild/RPMS/x86_64/i3-1-1.x86_64.rpm .
 	docker rm tmp
 
+clean: ## Remove generated files
+	-rm -v *.rpm
 MAKEFILE_LIST:=Makefile
 .PHONY: help
 help: ## help
