@@ -10,6 +10,7 @@ RUN python3 -mpip install meson
 RUN git clone git://code.i3wm.org/i3 i3
 RUN dnf install startup-notification-devel xcb-util-devel xcb-util-cursor-devel xcb-util-keysyms-devel xcb-util-wm-devel libxkbcommon-devel libxkbcommon-x11-devel yajl-devel pcre2-devel cairo-devel pango-devel libev-devel ninja-build perl-ExtUtils-MakeMaker xcb-util-xrm-devel -y
 WORKDIR /src/i3/build
+RUN mkdir -p /rpmbuild/ && git describe > /rpmbuild/version
 RUN meson ..
 RUN ninja
 WORKDIR /rpmbuild

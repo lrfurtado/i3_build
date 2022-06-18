@@ -1,11 +1,16 @@
+%define build_timestamp %(date +"%Y%m%d%H%M")
+%define build_git_describe %(cat /rpmbuild/version)
+
 Name:       i3
-Version:    1
+Version:    %{build_timestamp}
 Release:    1
 Summary:    i3wm window manager
 License:    YOLO
 
 %description
 this a package for the i3wm window manager
+
+was built from this commit: %{build_git_describe}
 
 %prep
 # we have no source, so nothing here
