@@ -6,6 +6,7 @@ Version:    %{build_timestamp}
 Release:    1
 Summary:    i3wm window manager
 License:    YOLO
+Group:      Applications/luciano
 
 %description
 this a package for the i3wm window manager
